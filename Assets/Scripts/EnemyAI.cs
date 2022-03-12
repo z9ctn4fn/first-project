@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     public GameObject BulletPrefab;
     public GameObject Enemy;
     public int Health;
+    public float FireDelay = 0.75f;
     Transform target;
     
     // Update is called once per frame
@@ -22,6 +23,9 @@ public class EnemyAI : MonoBehaviour
         {
             Destroy(Enemy);
         }
+    }
+    void Start()
+    {
         StartCoroutine(Shooting());
     }
     void OnCollisionEnter2D(Collision2D info)
@@ -42,7 +46,11 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator Shooting()
     {
-        yield return new WaitForSeconds(1.5f);
-        Shoot();
+        while(Health > 0)
+        {
+            yield return new WaitForSeconds(0.1f);
+            Shoot();
+            yield return new WaitForSeconds(FireDelay);   
+        }
     }
 }
