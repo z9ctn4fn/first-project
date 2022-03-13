@@ -7,6 +7,7 @@ public class PlayerShooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bullet;
     public float bulletForce = 20f;
+    public AudioSource fireSound;
 
     // Update is called once per frame
     void Update()
@@ -23,5 +24,6 @@ public class PlayerShooting : MonoBehaviour
         bulletObject = Instantiate(bullet, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bulletObject.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);   
+        fireSound.Play();
     }
 }
