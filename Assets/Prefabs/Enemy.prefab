@@ -299,7 +299,10 @@ MonoBehaviour:
   Health: 3
   FireDelay: 0.75
   fireSound: {fileID: 1110137431565149369}
+<<<<<<< HEAD
   flash: {fileID: 8685941931868937123}
+=======
+>>>>>>> 70290caced8f016b982654cb9fb873b60e3ac928
 --- !u!61 &3894077473634949361
 BoxCollider2D:
   m_ObjectHideFlags: 0

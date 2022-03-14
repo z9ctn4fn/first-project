@@ -12,7 +12,10 @@ public class EnemyAI : MonoBehaviour
     public float FireDelay = 0.75f;
     Transform target;
     public AudioSource fireSound;
+<<<<<<< HEAD
     public SpriteRenderer flash;
+=======
+>>>>>>> 70290caced8f016b982654cb9fb873b60e3ac928
     
     // Update is called once per frame
     void FixedUpdate()
@@ -46,7 +49,10 @@ public class EnemyAI : MonoBehaviour
         Rigidbody2D rb = bulletObject.GetComponent<Rigidbody2D>();
         rb.AddForce(GunTip.up * 25f, ForceMode2D.Impulse);
         fireSound.Play();
+<<<<<<< HEAD
         StartCoroutine(FlashBehaivor());
+=======
+>>>>>>> 70290caced8f016b982654cb9fb873b60e3ac928
     }
     IEnumerator Shooting()
     {

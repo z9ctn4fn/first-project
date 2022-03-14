@@ -8,7 +8,10 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bullet;
     public float bulletForce = 20f;
     public AudioSource fireSound;
+<<<<<<< HEAD
     public SpriteRenderer flash;
+=======
+>>>>>>> 70290caced8f016b982654cb9fb873b60e3ac928
 
     // Update is called once per frame
     void Start()
@@ -30,6 +33,7 @@ public class PlayerShooting : MonoBehaviour
         Rigidbody2D rb = bulletObject.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);   
         fireSound.Play();
+<<<<<<< HEAD
         StartCoroutine(FlashBehaivor());
     }
     IEnumerator FlashBehaivor()
@@ -37,5 +41,7 @@ public class PlayerShooting : MonoBehaviour
         flash.enabled = true;
         yield return new WaitForSeconds(0.1f);
         flash.enabled = false;
+=======
+>>>>>>> 70290caced8f016b982654cb9fb873b60e3ac928
     }
 }
