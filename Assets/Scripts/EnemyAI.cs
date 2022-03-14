@@ -11,6 +11,8 @@ public class EnemyAI : MonoBehaviour
     public int Health;
     public float FireDelay = 0.75f;
     Transform target;
+    public AudioSource fireSound;
+    public SpriteRenderer flash;
     
     // Update is called once per frame
     void FixedUpdate()
@@ -43,6 +45,8 @@ public class EnemyAI : MonoBehaviour
         var bulletObject = Instantiate(BulletPrefab, GunTip.position, GunTip.rotation);
         Rigidbody2D rb = bulletObject.GetComponent<Rigidbody2D>();
         rb.AddForce(GunTip.up * 25f, ForceMode2D.Impulse);
+        fireSound.Play();
+        StartCoroutine(FlashBehaivor());
     }
     IEnumerator Shooting()
     {
@@ -52,5 +56,12 @@ public class EnemyAI : MonoBehaviour
             Shoot();
             yield return new WaitForSeconds(FireDelay);   
         }
+    }
+
+    IEnumerator FlashBehaivor()
+    {
+        flash.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        flash.enabled = false;
     }
 }
