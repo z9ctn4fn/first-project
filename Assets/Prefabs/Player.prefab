@@ -183,10 +183,7 @@ MonoBehaviour:
   bullet: {fileID: 1623301002352568738, guid: 2556dad7e7cfc23488be55ebdbcd3640, type: 3}
   bulletForce: 20
   fireSound: {fileID: 1811635647569543396}
-<<<<<<< HEAD
   flash: {fileID: 3793325012147159926}
-=======
->>>>>>> 70290caced8f016b982654cb9fb873b60e3ac928
 --- !u!82 &1811635647569543396
 AudioSource:
   m_ObjectHideFlags: 0
