@@ -9,6 +9,7 @@ public class PlayerShooting : MonoBehaviour
     public float bulletForce = 20f;
     public AudioSource fireSound;
     public SpriteRenderer flash;
+    bool canShoot = true;
 
     // Update is called once per frame
     void Start()
@@ -19,18 +20,21 @@ public class PlayerShooting : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            StopCoroutine(Shooting());
+            StartCoroutine(Shooting());
         }
     }
 
     void Shoot()
     {
+        
         GameObject bulletObject; 
         bulletObject = Instantiate(bullet, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bulletObject.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);   
         fireSound.Play();
         StartCoroutine(FlashBehaivor());
+        
     }
     IEnumerator FlashBehaivor()
     {
@@ -38,4 +42,16 @@ public class PlayerShooting : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         flash.enabled = false;
     }
+    IEnumerator Shooting()
+    {
+        if (canShoot == true)
+        {
+            canShoot = false;
+            Shoot();
+            yield return new WaitForSeconds(0.25f);
+            canShoot = true;
+        }
+
+    }
+
 }
