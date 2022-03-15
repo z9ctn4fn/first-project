@@ -10,7 +10,6 @@ OcclusionCullingSettings:
     backfaceThreshold: 100
   m_SceneGUID: 00000000000000000000000000000000
   m_OcclusionCullingData: {fileID: 0}
---- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
@@ -694,6 +693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   buttonText: {fileID: 917958632}
+  Shooting: {fileID: 851782265}
+  isPaused: 0
 --- !u!1 &667936963
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +981,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &851782265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8247193287899411748, guid: 3b7ee118d501aa940aa46be728591c6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 143596283201338206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0c88ce5b4ac3e4bb7792618fbff3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &917958630
 GameObject:
   m_ObjectHideFlags: 0
