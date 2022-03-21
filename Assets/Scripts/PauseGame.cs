@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PauseGame : MonoBehaviour
 {
-    public bool paused = false;
+    private bool paused = false;
     public Text buttonText;
     public void TogglePause()
     {
