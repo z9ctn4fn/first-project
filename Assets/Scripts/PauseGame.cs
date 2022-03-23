@@ -15,15 +15,13 @@ public class PauseGame : MonoBehaviour
             buttonText.text = "Resume";
             paused = true;
             Debug.Log("Paused");
-            return; // so that unity dosen't unpause immediately
         }
-        if (paused == true)
+        else if (paused == true)
         {
             Time.timeScale = 1;
             buttonText.text = "Pause";
             paused = false;
             Debug.Log("Unpaused");
-            return;
         }
     }
 }

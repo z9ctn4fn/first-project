@@ -9,6 +9,12 @@ public class PlayerShooting : MonoBehaviour
     public float bulletForce = 20f;
     public AudioSource fireSound;
     public SpriteRenderer flash;
+    public GameObject pistol;
+    public GameObject shotgun;
+    public Transform shotgunfirepoint1;
+    public Transform shotgunfirepoint2;
+    public Transform shotgunfirepoint3;
+    private string equippedWeapon = "pistol";
     bool canShoot = true;
 
     // Update is called once per frame
@@ -22,6 +28,18 @@ public class PlayerShooting : MonoBehaviour
         {
             StopCoroutine(Shooting());
             StartCoroutine(Shooting());
+        }
+        if(Input.GetButtonDown("1"))
+        {
+            shotgun.SetActive(false);
+            pistol.SetActive(true);
+            equippedWeapon = "pistol";
+        }
+        if(Input.GetButtonDown("2"))
+        {
+            shotgun.SetActive(true);
+            pistol.SetActive(false);
+            equippedWeapon = "shotgun";
         }
     }
 
