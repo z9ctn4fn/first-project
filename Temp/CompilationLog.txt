@@ -1,6 +1,2 @@
 # Starting compiling Assembly-CSharp.dll
-<<<<<<< HEAD
-/home/evan/Unity/Hub/Editor/2020.3.31f1/Editor/Data/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-e52ff96073fffec7eadc93929063c158
-=======
-/home/evan/Unity/Hub/Editor/2020.3.31f1/Editor/Data/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-378208b6f060656b4a87418b30a43692
->>>>>>> parent of 9dd22cb... Added the new input system and modified some code.
+/home/evan/Unity/Hub/Editor/2020.3.31f1/Editor/Data/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-5593067e8b650b35099fbd0a81d20311
