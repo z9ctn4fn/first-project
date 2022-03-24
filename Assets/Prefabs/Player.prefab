@@ -55,7 +55,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -168,11 +167,6 @@ MonoBehaviour:
   Movement: {fileID: 143596283444686541}
   Shooting: {fileID: -8247193287899411748}
   HealthText: {fileID: 0}
-  endStuff: {fileID: 0}
-  endText: {fileID: 0}
-  nextLevel: {fileID: 0}
-  nextLevelButton: {fileID: 0}
-  nextLevelText: {fileID: 0}
 --- !u!114 &-8247193287899411748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,11 +184,6 @@ MonoBehaviour:
   bulletForce: 20
   fireSound: {fileID: 1811635647569543396}
   flash: {fileID: 3793325012147159926}
-  pistol: {fileID: 3715357049407481904}
-  shotgun: {fileID: 461306758736982741}
-  shotgunfirepoint1: {fileID: 279132197025297138}
-  shotgunfirepoint2: {fileID: 4897431778073357228}
-  shotgunfirepoint3: {fileID: 8112075717409043675}
 --- !u!82 &1811635647569543396
 AudioSource:
   m_ObjectHideFlags: 0
@@ -368,7 +357,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -420,7 +408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4931764664845683211
 Transform:
   m_ObjectHideFlags: 0
@@ -434,9 +422,6 @@ Transform:
   m_Children:
   - {fileID: 1398405508793846589}
   - {fileID: 7299895400164599491}
-  - {fileID: 4897431778073357228}
-  - {fileID: 279132197025297138}
-  - {fileID: 8112075717409043675}
   m_Father: {fileID: 143596283444686540}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -455,7 +440,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -491,66 +475,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &691506769012651245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 279132197025297138}
-  m_Layer: 0
-  m_Name: Muzzle (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &279132197025297138
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691506769012651245}
-  m_LocalRotation: {x: -0, y: -0, z: 0.093138, w: 0.9956532}
-  m_LocalPosition: {x: -0.4, y: 0.566, z: 0}
-  m_LocalScale: {x: 4.578214, y: 1.5802469, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4931764664845683211}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.688}
---- !u!1 &2439201912479334842
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8112075717409043675}
-  m_Layer: 0
-  m_Name: Muzzle (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8112075717409043675
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2439201912479334842}
-  m_LocalRotation: {x: -0, y: -0, z: -0.077683575, w: 0.9969781}
-  m_LocalPosition: {x: 0.51, y: 0.566, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4931764664845683211}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.911}
 --- !u!1 &3715357049407481904
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8292587362006832913
 Transform:
   m_ObjectHideFlags: 0
@@ -583,36 +507,6 @@ Transform:
   - {fileID: 3691146346239190059}
   m_Father: {fileID: 143596283444686540}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5661177299477080061
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4897431778073357228}
-  m_Layer: 0
-  m_Name: Muzzle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4897431778073357228
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5661177299477080061}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.566, z: 0}
-  m_LocalScale: {x: 4.578214, y: 1.5802469, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4931764664845683211}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6274123262229774602
 GameObject:
@@ -660,7 +554,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -772,7 +665,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -854,7 +746,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
