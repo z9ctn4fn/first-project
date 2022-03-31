@@ -12,6 +12,8 @@ public class PlayerCollision : MonoBehaviour
     public Text endText;
     public Image nextLevel;
     public Button nextLevelButton;
+    public Text nextLevelText;
+    public AudioSource hitSound;
 
     void OnCollisionEnter2D(Collision2D info)
     {
@@ -19,6 +21,7 @@ public class PlayerCollision : MonoBehaviour
         {
             Debug.Log("Hit");
             Health = Health - 1;
+            hitSound.Play();
             if(Health <= 0){
                 Movement.enabled = false;
                 Shooting.enabled = false;
@@ -28,6 +31,7 @@ public class PlayerCollision : MonoBehaviour
                 nextLevel.enabled = false;
                 nextLevelButton.enabled = false;
                 Time.timeScale = 0;
+                nextLevelText.enabled = false;
             }
             
         }

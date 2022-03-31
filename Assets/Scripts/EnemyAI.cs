@@ -32,7 +32,6 @@ public class EnemyAI : MonoBehaviour
                 IsAwake = true;
                 StartCoroutine(Shooting());
             }
-            Debug.Log($"Hit {hit.collider.name}");
         }
         if (IsAwake == true)
         {
