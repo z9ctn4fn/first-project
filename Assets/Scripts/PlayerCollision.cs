@@ -14,6 +14,7 @@ public class PlayerCollision : MonoBehaviour
     public Button nextLevelButton;
     public Text nextLevelText;
     public AudioSource hitSound;
+    public AudioSource deathSound;
 
     void OnCollisionEnter2D(Collision2D info)
     {
@@ -32,6 +33,7 @@ public class PlayerCollision : MonoBehaviour
                 nextLevelButton.enabled = false;
                 Time.timeScale = 0;
                 nextLevelText.enabled = false;
+                deathSound.Play();
             }
             
         }
